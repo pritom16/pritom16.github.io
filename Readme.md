@@ -1,6 +1,6 @@
 # Personal Portfolio 🔥
 
-> https://kukr.github.io/
+> https://pritom16.github.io/
 
 <!-- :star: Star me on GitHub — it helps! -->
 
