@@ -16,8 +16,8 @@
     ) {
       var hash = this.hash;
       var target = $(hash);
-      if (target.length)  {
-        e./reventDefault();
+      if (target.length) {
+        e.preventDefault();
 
         if ($(this).parents('.nav-menu, .mobile-nav').length) {
           $('.nav-menu .active, .mobile-nav .active').removeClass('active');
@@ -173,7 +173,7 @@
     if ($('.research-container').length) {
       var researchIsotope = $('.research-container').isotope({
         itemSelector: '.research-item',
-        layoutMode: 'fitRows'
+        layoutMode: 'fitRows',
       });
 
       $('#research-flters li').on('click', function () {
