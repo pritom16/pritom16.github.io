@@ -16,7 +16,7 @@
     ) {
       var hash = this.hash;
       var target = $(hash);
-      if (target.length) {
+      if (target.length)  {
         e.preventDefault();
 
         if ($(this).parents('.nav-menu, .mobile-nav').length) {
@@ -28,7 +28,7 @@
           var custom_greet = document.querySelector('#intro-greeting');
           custom_greet.style.display = 'block';
           var fullName = document.querySelector('#full-name');
-          fullName.innerHTML = 'Uday Kanth Reddy';
+          fullName.innerHTML = 'Nixon Deb Pritom';
           $('#header').removeClass('header-top');
           $('section').removeClass('section-show');
           return;
@@ -39,7 +39,7 @@
           console.log('Header-top activated');
 
           var fullName = document.querySelector('#full-name');
-          fullName.innerHTML = 'Uday Kanth Reddy Kakarla';
+          fullName.innerHTML = 'Nixon Deb Pritom';
 
           var custom_greet = document.querySelector('#intro-greeting');
           custom_greet.style.display = 'none';
@@ -168,6 +168,21 @@
         filter: $(this).data('filter'),
       });
     });
+
+    /* Research Experience filtering (uses Isotope like portfolio) */
+    if ($('.research-container').length) {
+      var researchIsotope = $('.research-container').isotope({
+        itemSelector: '.research-item',
+        layoutMode: 'fitRows'
+      });
+
+      $('#research-flters li').on('click', function () {
+        $('#research-flters li').removeClass('filter-active');
+        $(this).addClass('filter-active');
+        var filterValue = $(this).attr('data-filter');
+        researchIsotope.isotope({ filter: filterValue });
+      });
+    }
   });
 
   // Initiate venobox (lightbox feature used in portofilo)
